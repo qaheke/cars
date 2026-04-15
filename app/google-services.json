@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "589342518895",
+    "project_id": "escober-23091",
+    "storage_bucket": "escober-23091.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589342518895:android:720ea9ae8ffbb0cf35a79a",
+        "android_client_info": {
+          "package_name": "com.example.carparkingsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH7DZSgoxo6bUlp3-NVJYFHwga6cYtVr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
