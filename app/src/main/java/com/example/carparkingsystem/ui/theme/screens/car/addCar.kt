@@ -33,6 +33,8 @@ fun AddCarScreen(navController: NavController) {
     var vehicleType by remember { mutableStateOf("") }
     var driverName by remember { mutableStateOf("") }
     var phoneNumber by remember { mutableStateOf("") }
+    var carColor by remember { mutableStateOf("") }
+    var entryTime by remember { mutableStateOf("") }
 
     val launcher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetContent()
@@ -122,18 +124,35 @@ fun AddCarScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )
+            OutlinedTextField(
+                value = carColor,
+                onValueChange = { carColor = it },
+                label = { Text("Car Color") },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true
+            )
+            OutlinedTextField(
+                value = entryTime,
+                onValueChange = { entryTime = it },
+                label = { Text("Entry Time") },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true
+            )
 
             // SAVE BUTTON
             Button(
                 onClick = {
-                    carViewModel.uploadCar(imageUri,
-                        plateNumber,
-                        vehicleType,
-                        driverName,
-                        phoneNumber,
-                        context,
-                        navController )
-                    // TODO: Save to Firebase or database
+                    carViewModel.uploadCar(
+                        imageUri = imageUri,
+                        plateNumber = plateNumber,
+                        vehicleType = vehicleType,
+                        driverName = driverName,
+                        phoneNumber = phoneNumber,
+                        carColor = carColor,
+                        entryTime = entryTime,
+                        context = context,
+                        navController = navController
+                    )
                 },
                 modifier = Modifier
                     .fillMaxWidth()
